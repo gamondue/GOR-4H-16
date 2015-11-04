@@ -775,30 +775,6 @@
 <node CREATED="1362169140720" ID="ID_1128667679" MODIFIED="1362169142284" TEXT="/etc/init.d/openvpn start"/>
 </node>
 </node>
-<node CREATED="1366324098502" FOLDED="true" ID="ID_333082949" MODIFIED="1446661720586" POSITION="left" TEXT="ASP.NET">
-<node CREATED="1366324104739" ID="ID_14674427" MODIFIED="1366324111632" TEXT="con server C#"/>
-<node CREATED="1366324111995" FOLDED="true" ID="ID_281139289" MODIFIED="1446661720586" TEXT="con Apache e mod_mono">
-<node CREATED="1366324117294" FOLDED="true" ID="ID_1258437456" MODIFIED="1446661720586" TEXT="installare mod_mono">
-<node CREATED="1366324277436" ID="ID_1935198149" MODIFIED="1366324289945" TEXT="apt-get update"/>
-<node CREATED="1366324277436" ID="ID_941618770" MODIFIED="1366324299037" TEXT="apt-get upgrade"/>
-<node CREATED="1366324319462" ID="ID_457102672" MODIFIED="1366324631831" TEXT="fermare il demone apache prima dell&apos;installazione di mod_mono"/>
-<node CREATED="1366324367459" ID="ID_1684090966" MODIFIED="1366324388057" TEXT="/etc/init.d/apache2 stop"/>
-<node CREATED="1366324530172" ID="ID_1826527230" MODIFIED="1366324631831" TEXT="installare mod_mono"/>
-<node CREATED="1366324527503" ID="ID_1613637308" MODIFIED="1366325555120" TEXT="apt-get install mono-apache-server2"/>
-<node CREATED="1366324527503" FOLDED="true" ID="ID_1126018780" MODIFIED="1446661720585" TEXT="apt-get install libapache2-mod_mono">
-<node CREATED="1366326249713" ID="ID_1168424768" MODIFIED="1366326251183" TEXT="Impossibile trovare il pacchetto libapache2-mod_mono"/>
-</node>
-<node CREATED="1366324527503" FOLDED="true" ID="ID_429193681" MODIFIED="1446661720586" TEXT="apt-get install libmono-i1">
-<node CREATED="1366326277896" ID="ID_743381919" MODIFIED="1366326278710" TEXT="Impossibile trovare il pacchetto libmono-i1"/>
-</node>
-<node CREATED="1366324562187" ID="ID_1388281225" MODIFIED="1366324572664" TEXT="far ripartire il server apache"/>
-<node CREATED="1366324573097" ID="ID_1347363034" MODIFIED="1366324574355" TEXT="/etc/init.d/apache2 start"/>
-</node>
-<node CREATED="1366324147017" FOLDED="true" ID="ID_827897252" MODIFIED="1446661720586" TEXT="ATTENZIONE: mod_mono d&#xe0; problemi con php!">
-<node CREATED="1366324174760" ID="ID_1848839538" MODIFIED="1366324183428" TEXT="meglio non usarli insieme"/>
-</node>
-</node>
-</node>
 <node CREATED="1363032718569" FOLDED="true" ID="ID_403742342" MODIFIED="1446661720587" POSITION="left" TEXT="GPIO">
 <node CREATED="1363032722544" FOLDED="true" ID="ID_881356669" MODIFIED="1446661720587" TEXT="con mono e C#">
 <node CREATED="1363033779815" FOLDED="true" ID="ID_1541830426" MODIFIED="1446661720587" TEXT="installare in /lib la libreria lpigpio ">
@@ -907,7 +883,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1361741917086" FOLDED="true" ID="ID_1196626461" MODIFIED="1446661753165" POSITION="right" TEXT="Installazione mono">
+<node CREATED="1361741917086" FOLDED="true" ID="ID_1196626461" MODIFIED="1446666333392" POSITION="right" TEXT="Installazione mono">
 <node CREATED="1411312127332" ID="ID_1532467221" MODIFIED="1411312177393" TEXT="E&apos; la versione &quot;libera&quot;, per Linux, del &quot;framewok&quot; .NET"/>
 <node CREATED="1363024044206" FOLDED="true" ID="ID_649619303" MODIFIED="1446661720591" TEXT="Installare il runtime">
 <node CREATED="1361742013686" ID="ID_986879669" MODIFIED="1361742014796" TEXT="sudo apt-get install mono-runtime"/>
@@ -1262,6 +1238,16 @@ exit 0</pre>
 </node>
 </node>
 </node>
+<node CREATED="1411329807301" ID="ID_1354649442" MODIFIED="1414364518687" POSITION="right" TEXT="I/O I2C con Mono">
+<node CREATED="1411329845388" ID="ID_1562983729" MODIFIED="1446666988994" TEXT="libreria usata nel programma">
+<node CREATED="1411329853627" ID="ID_1835795870" MODIFIED="1411329854799" TEXT="https://github.com/raspberry-sharp/raspberry-sharp-io"/>
+</node>
+<node CREATED="1411329861472" ID="ID_1083189930" MODIFIED="1446666584050" TEXT="LANCIARE I PROGRAMMI CON sudo!">
+<node CREATED="1411329895209" ID="ID_29807637" MODIFIED="1446666588231" TEXT="es.">
+<node CREATED="1411329897681" ID="ID_295429417" MODIFIED="1411329898869" TEXT="sudo mono Test.Gpio.Chaser.exe"/>
+</node>
+</node>
+</node>
 <node CREATED="1356736455233" FOLDED="true" ID="ID_1882703059" MODIFIED="1446661720625" POSITION="right" TEXT="Istruzioni per la creazione di una SD contenente un&apos;immagine &quot;campione&quot;, da clonare">
 <node CREATED="1411315083032" ID="ID_141303431" MODIFIED="1411315160395" TEXT="Quando il sistema &#xe8; configurato ed operativo, lo si pu&#xf2; &quot;fotografare&quot;, come backup, o per poterlo replicare uguale su altre Raspberry"/>
 <node CREATED="1370678921723" FOLDED="true" ID="ID_216955398" MODIFIED="1446661720623" TEXT="In Windows">
@@ -1312,7 +1298,7 @@ exit 0</pre>
 </node>
 </node>
 </node>
-<node CREATED="1362407031680" FOLDED="true" ID="ID_1632974059" MODIFIED="1446661720625" POSITION="left" TEXT="Configurazione IP sofisticata, con indirizzi fissi ed alias">
+<node CREATED="1362407031680" FOLDED="true" ID="ID_1632974059" MODIFIED="1446666757857" POSITION="left" TEXT="Configurazione IP sofisticata, con indirizzi fissi ed alias">
 <node CREATED="1362419718635" ID="ID_1055393924" MODIFIED="1362419729421" TEXT="dato l&apos;indirizzo: 172.16.27.7"/>
 <node CREATED="1362408095562" ID="ID_1807005937" MODIFIED="1362419673215" TEXT="modificare con nano /etc/network/interfaces"/>
 <node CREATED="1362419673627" ID="ID_373313250" MODIFIED="1362762734195">
@@ -1500,8 +1486,8 @@ exit 0</pre>
 </node>
 <node CREATED="1362762879752" ID="ID_1004334407" MODIFIED="1362762912599" TEXT="controllare con ifconfig che gli alias siano configurati e funzionanti"/>
 </node>
-<node CREATED="1411316430380" FOLDED="true" ID="ID_850256543" MODIFIED="1446661720631" POSITION="left" TEXT="Configurazione di MySQL per uso a scuola">
-<node CREATED="1362408179269" FOLDED="true" ID="ID_616092015" MODIFIED="1446661720625" TEXT="password per l&apos;utente root del server MySql">
+<node CREATED="1411316430380" FOLDED="true" ID="ID_850256543" MODIFIED="1446666767841" POSITION="left" TEXT="Configurazione di MySQL per uso a scuola">
+<node CREATED="1362408179269" FOLDED="true" ID="ID_616092015" MODIFIED="1446666766417" TEXT="password per l&apos;utente root del server MySql">
 <node CREATED="1362408200949" FOLDED="true" ID="ID_758396313" MODIFIED="1446661720625" TEXT="raspberry">
 <node CREATED="1362516233181" ID="ID_1734804384" MODIFIED="1411316027257" TEXT="stessa password del computer, ma potrebbe essere diversa"/>
 </node>
@@ -1661,7 +1647,7 @@ exit 0</pre>
 </node>
 </node>
 </node>
-<node CREATED="1420191134239" FOLDED="true" ID="ID_113043218" MODIFIED="1446661720632" POSITION="left" TEXT="WLAN, WiFi">
+<node CREATED="1420191134239" FOLDED="true" ID="ID_113043218" MODIFIED="1446666773657" POSITION="left" TEXT="WLAN, WiFi">
 <node CREATED="1420191147463" FOLDED="true" ID="ID_1692459035" MODIFIED="1446661720631" TEXT="comandi iwconfig,  iwlist">
 <node CREATED="1420191169859" ID="ID_245871748" MODIFIED="1420193086945" TEXT="iwconfig &#xe8; simile a ifconfig , ma per le sole interfacce WLAN"/>
 </node>
@@ -1685,7 +1671,7 @@ exit 0</pre>
 </node>
 </node>
 </node>
-<node CREATED="1420190666367" FOLDED="true" ID="ID_948014527" MODIFIED="1446661720634" POSITION="left" TEXT="WLAN con abilitazione automatica al boot">
+<node CREATED="1420190666367" FOLDED="true" ID="ID_948014527" MODIFIED="1446666776240" POSITION="left" TEXT="WLAN con abilitazione automatica al boot">
 <node CREATED="1420190709835" ID="ID_481568695" MODIFIED="1420190821520" TEXT="Alcune schede funzionano se fatte partire dall&apos;ambiente grafico, mentre non partono automaticamente al boot (es. Dlink XXXX????)"/>
 <node CREATED="1420190795290" FOLDED="true" ID="ID_1819950992" MODIFIED="1446661720633" TEXT="Per farlo devono essere supportate da un &quot;manager&quot;">
 <node CREATED="1420190883772" FOLDED="true" ID="ID_746649924" MODIFIED="1446661720633" TEXT="ci sono">
@@ -1758,6 +1744,59 @@ iface lo inet loopback</pre>
 <node CREATED="1420199338471" ID="ID_931960462" MODIFIED="1420199374931" TEXT="Al reboot la scheda si collega alla rete WLAN"/>
 </node>
 </node>
+</node>
+<node CREATED="1366324098502" ID="ID_333082949" MODIFIED="1446666327631" POSITION="right" TEXT="ASP.NET">
+<node CREATED="1366324104739" ID="ID_14674427" MODIFIED="1366324111632" TEXT="con server C#">
+<node CREATED="1446669603527" ID="ID_1126102914" MODIFIED="1446669720700" TEXT="xsp &#xe8; un server scritto in C#, che si pu&#xf2; usare per sviluppo e debugging. Non &#xe8; adatto ad un sito di produzione. "/>
+<node CREATED="1446669749293" ID="ID_1590884772" MODIFIED="1446669762934" TEXT="xsp2 &#xe8; per asp.net 2"/>
+<node CREATED="1446669749293" ID="ID_1245133402" MODIFIED="1446669770965" TEXT="xsp4 &#xe8; per asp.net 4"/>
+<node CREATED="1446669901029" ID="ID_1696764416" MODIFIED="1446669908502" TEXT="installazione">
+<node CREATED="1446669915915" ID="ID_339921097" MODIFIED="1446669924434" TEXT="si installava cos&#xec;:">
+<node CREATED="1446670010618" ID="ID_746782536" MODIFIED="1446670018359" TEXT="asp.net 1">
+<node CREATED="1446669912306" ID="ID_1674445682" MODIFIED="1446669912306" TEXT="sudo apt-get install mono-xsp mono-xsp-base asp.net-examples"/>
+</node>
+<node CREATED="1446670010618" ID="ID_963597408" MODIFIED="1446670065592" TEXT="asp.net 2">
+<node CREATED="1446670059947" ID="ID_738111876" MODIFIED="1446670059947" TEXT="sudo apt-get install mono-xsp2 mono-xsp2-base asp.net2-examples"/>
+</node>
+<node CREATED="1446670463894" ID="ID_1371811121" MODIFIED="1446670473237" TEXT="NON installare cos&#xec;!"/>
+</node>
+<node CREATED="1446669929711" ID="ID_1429030224" MODIFIED="1446670228395" TEXT="il package &#xe8; cambiato ora &#xe8; dh-xsp">
+<node CREATED="1446670198745" ID="ID_924332714" MODIFIED="1446670198745" TEXT="sudo apt-get install asp.net-examples"/>
+<node CREATED="1446670218230" ID="ID_432906309" MODIFIED="1446670219859" TEXT="sudo apt-get install dh-xsp"/>
+<node CREATED="1446670385772" ID="ID_151996146" MODIFIED="1446670386417" TEXT="sudo apt-get install mono-xsp4"/>
+</node>
+</node>
+<node CREATED="1446670715553" ID="ID_1023584681" MODIFIED="1446670717048" TEXT="uso">
+<node CREATED="1446670717976" ID="ID_1651348435" MODIFIED="1446670728699" TEXT="lanciare il server cos&#xec;:">
+<node CREATED="1446670729610" ID="ID_1379014262" MODIFIED="1446670729610" TEXT="xsp4 --port 8080 --root /home/pi/GOR5F_15-16/WebApp"/>
+<node CREATED="1446670754901" FOLDED="true" ID="ID_1945751682" MODIFIED="1446671324413" TEXT="se si vuole che il listening venga fatto su un indirizzo specifico (computer con IP multihomed)">
+<node CREATED="1446670821803" ID="ID_1101720006" MODIFIED="1446670843435" TEXT="opzione --address &lt;indirizzo IP su cui ascolta&gt;"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1366324111995" ID="ID_281139289" MODIFIED="1446666318617" TEXT="con Apache e mod_mono">
+<node CREATED="1366324117294" FOLDED="true" ID="ID_1258437456" MODIFIED="1446666324927" TEXT="installare mod_mono">
+<node CREATED="1366324277436" ID="ID_1935198149" MODIFIED="1366324289945" TEXT="apt-get update"/>
+<node CREATED="1366324277436" ID="ID_941618770" MODIFIED="1366324299037" TEXT="apt-get upgrade"/>
+<node CREATED="1366324319462" ID="ID_457102672" MODIFIED="1366324631831" TEXT="fermare il demone apache prima dell&apos;installazione di mod_mono"/>
+<node CREATED="1366324367459" ID="ID_1684090966" MODIFIED="1366324388057" TEXT="/etc/init.d/apache2 stop"/>
+<node CREATED="1366324530172" ID="ID_1826527230" MODIFIED="1366324631831" TEXT="installare mod_mono"/>
+<node CREATED="1366324527503" ID="ID_1613637308" MODIFIED="1366325555120" TEXT="apt-get install mono-apache-server2"/>
+<node CREATED="1366324527503" FOLDED="true" ID="ID_1126018780" MODIFIED="1446661720585" TEXT="apt-get install libapache2-mod_mono">
+<node CREATED="1366326249713" ID="ID_1168424768" MODIFIED="1366326251183" TEXT="Impossibile trovare il pacchetto libapache2-mod_mono"/>
+</node>
+<node CREATED="1366324527503" FOLDED="true" ID="ID_429193681" MODIFIED="1446661720586" TEXT="apt-get install libmono-i1">
+<node CREATED="1366326277896" ID="ID_743381919" MODIFIED="1366326278710" TEXT="Impossibile trovare il pacchetto libmono-i1"/>
+</node>
+<node CREATED="1366324562187" ID="ID_1388281225" MODIFIED="1366324572664" TEXT="far ripartire il server apache"/>
+<node CREATED="1366324573097" ID="ID_1347363034" MODIFIED="1366324574355" TEXT="/etc/init.d/apache2 start"/>
+</node>
+<node CREATED="1366324147017" FOLDED="true" ID="ID_827897252" MODIFIED="1446661720586" TEXT="ATTENZIONE: mod_mono d&#xe0; problemi con php!">
+<node CREATED="1366324174760" ID="ID_1848839538" MODIFIED="1366324183428" TEXT="meglio non usarli insieme"/>
+</node>
+</node>
+<node CREATED="1446669724165" ID="ID_332085909" MODIFIED="1446669729361" TEXT="con nginx"/>
 </node>
 </node>
 </map>
