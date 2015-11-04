@@ -57,7 +57,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1412242382273" FOLDED="true" ID="ID_1511684153" MODIFIED="1420227689342" POSITION="right" TEXT="1-wire">
+<node CREATED="1412242382273" ID="ID_1511684153" MODIFIED="1446656497886" POSITION="right" TEXT="1-wire">
 <node CREATED="1412242385573" ID="ID_319302706" MODIFIED="1412242412998" TEXT="Standard fatto dalla Dallas per le &quot;chiavi elettroniche&quot;"/>
 <node CREATED="1412242444574" ID="ID_311818729" MODIFIED="1412242453536" TEXT="Similar in concept to I&#xb2;C, but with lower data rates and longer range. "/>
 <node CREATED="1412242476304" ID="ID_707754410" MODIFIED="1412242487205" TEXT="possibility of using only two wires: data and ground. ">
@@ -69,7 +69,7 @@
 <node CREATED="1412242662329" ID="ID_1914118348" MODIFIED="1412242663199" TEXT="Each 1-Wire chip has a unique ID code"/>
 <node CREATED="1412245226561" ID="ID_1087857362" MODIFIED="1420226541907" STYLE="fork" TEXT="Nel Raspi c&apos;&#xe8; un driver Sw che lo fa funzionare, ma su un solo pin GPIO, difficile da cambiare (ricompilando il kernel)"/>
 </node>
-<node CREATED="1411077626722" FOLDED="true" ID="ID_1228527641" MODIFIED="1421620633887" POSITION="right" TEXT="I2C">
+<node CREATED="1411077626722" FOLDED="true" ID="ID_1228527641" MODIFIED="1446656495943" POSITION="right" TEXT="I2C">
 <node CREATED="1411077910806" ID="ID_660763352" MODIFIED="1411077911891" TEXT="I2C is a communication bus designed by Philips, for chips to communicate with each other">
 <node CREATED="1411079035414" ID="ID_460777986" MODIFIED="1411079047634" TEXT="inventato da Philips per le TV"/>
 <node CREATED="1411079496029" ID="ID_1685754510" MODIFIED="1411079498569" TEXT="1980"/>
@@ -174,7 +174,7 @@
 <node CREATED="1411079855196" ID="ID_1820079243" MODIFIED="1411079865442" TEXT="There are hacks to make I2C to work also on other voltages than 5V"/>
 </node>
 </node>
-<node CREATED="1415009196447" ID="ID_1278891713" MODIFIED="1421590404164" TEXT="Raspberry I2C">
+<node CREATED="1415009196447" FOLDED="true" ID="ID_1278891713" MODIFIED="1446656489668" TEXT="Raspberry I2C">
 <node CREATED="1411258979470" ID="ID_819548151" MODIFIED="1411259040679" TEXT="all&apos;installazione I2C &#xe8; disabilitato. Per abilitarlo si modifica il file di configurazione del driver I2C"/>
 <node CREATED="1411259044803" ID="ID_1221324913" MODIFIED="1412038252880" TEXT="sudo nano /etc/modprobe.d/raspi-blacklist.conf">
 <node CREATED="1411259173179" ID="ID_701418848" MODIFIED="1411259195243" TEXT="Il file potrebbe essere cos&#xec;:"/>
