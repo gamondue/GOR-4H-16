@@ -215,8 +215,8 @@
 </node>
 </node>
 <node CREATED="1446598377070" ID="ID_1235328845" MODIFIED="1446598401566" POSITION="right" TEXT="!!!! CONFIGURAZIONE RETE PER LAB 13 ANCORA DA FARE !!!!"/>
-<node CREATED="1362407579091" FOLDED="true" ID="ID_1264442117" MODIFIED="1446661720564" POSITION="right" TEXT="Configurazione dell&apos;interfaccia di rete">
-<node CREATED="1362407780625" FOLDED="true" ID="ID_410364146" MODIFIED="1446661720562" TEXT="configurazione con indirizzo IP dinamico">
+<node CREATED="1362407579091" ID="ID_1264442117" MODIFIED="1448323974613" POSITION="right" TEXT="Configurazione dell&apos;interfaccia di rete">
+<node CREATED="1362407780625" ID="ID_410364146" MODIFIED="1448323975486" TEXT="configurazione con indirizzo IP dinamico">
 <node CREATED="1394472297114" FOLDED="true" ID="ID_1047720353" MODIFIED="1446661720561" TEXT="impostata di default">
 <node CREATED="1362408095562" ID="ID_518052469" MODIFIED="1412033225318" TEXT="nel file /etc/network/interfaces"/>
 <node CREATED="1412033232521" ID="ID_128749952" MODIFIED="1412033250482" TEXT="deve esserci la seguente scritta, non commentata"/>
@@ -224,11 +224,11 @@
 </node>
 <node CREATED="1394472321354" ID="ID_593392438" MODIFIED="1394472337151" TEXT="(per rimetterla se la si &#xe8; tolta, vedere in seguito)"/>
 </node>
-<node CREATED="1362407780625" FOLDED="true" ID="ID_1665436016" MODIFIED="1446661720563" TEXT="configurazione con indirizzo IP statico">
-<node CREATED="1362408095562" FOLDED="true" ID="ID_79926291" MODIFIED="1446661720562" TEXT="modificare con">
+<node CREATED="1362407780625" ID="ID_1665436016" MODIFIED="1448323977534" TEXT="configurazione con indirizzo IP statico">
+<node CREATED="1362408095562" ID="ID_79926291" MODIFIED="1448323979818" TEXT="modificare con">
 <node CREATED="1446591619413" ID="ID_1320727923" MODIFIED="1446591621293" TEXT="sudo nano /etc/network/interfaces"/>
-<node CREATED="1446597910997" FOLDED="true" ID="ID_210204216" MODIFIED="1446661720562" TEXT="Il file deve avere qusto contenuti: ">
-<node CREATED="1362419673627" ID="ID_32858449" MODIFIED="1446591950961">
+<node CREATED="1446597910997" ID="ID_210204216" MODIFIED="1448323991822" TEXT="Il file deve avere questi contenuti: ">
+<node CREATED="1362419673627" ID="ID_32858449" MODIFIED="1448324215740">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -271,7 +271,7 @@
       iface eth0 inet static
     </p>
     <p>
-      address 10.13.10.13
+      address 10.13.10.14
     </p>
     <p>
       netmask 255.255.0.0
@@ -286,15 +286,16 @@
       gateway 10.13.0.254
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
-<node CREATED="1362762858837" FOLDED="true" ID="ID_20186002" MODIFIED="1446661720562" TEXT="per far ripartire il software di rete e leggere la nuova configurazione senza spegnere il computer">
+<node CREATED="1362762858837" FOLDED="true" ID="ID_20186002" MODIFIED="1448324224288" TEXT="per far ripartire il software di rete e leggere la nuova configurazione senza spegnere il computer">
 <node CREATED="1362762783694" ID="ID_1197924327" MODIFIED="1394477369283" TEXT="# sudo /etc/init.d/networking restart"/>
 </node>
-<node CREATED="1394477069831" FOLDED="true" ID="ID_1037577989" MODIFIED="1446661720563" TEXT="per far ripartire la sola scheda di rete">
-<node CREATED="1394477084095" FOLDED="true" ID="ID_780858677" MODIFIED="1446661720562" TEXT="# sudo ifconfig eth0 down">
+<node CREATED="1394477069831" ID="ID_1037577989" MODIFIED="1448324225482" TEXT="per far ripartire la sola scheda di rete">
+<node CREATED="1394477084095" ID="ID_780858677" MODIFIED="1448324228268" TEXT="# sudo ifconfig eth0 down">
 <node CREATED="1394477230358" ID="ID_1604011757" MODIFIED="1394477274515" TEXT="naturalmente la scheda si spegne, per cui questa &#xe8; da evitare se si &#xe8; in sessione remota (da terminale esterno al raspi)"/>
 </node>
 <node CREATED="1394477084095" ID="ID_627840899" MODIFIED="1394477114466" TEXT="# sudo ifconfig eth0 up"/>
@@ -883,7 +884,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1361741917086" FOLDED="true" ID="ID_1196626461" MODIFIED="1446666333392" POSITION="right" TEXT="Installazione mono">
+<node CREATED="1361741917086" FOLDED="true" ID="ID_1196626461" MODIFIED="1448323970829" POSITION="right" TEXT="Installazione mono">
 <node CREATED="1411312127332" ID="ID_1532467221" MODIFIED="1411312177393" TEXT="E&apos; la versione &quot;libera&quot;, per Linux, del &quot;framewok&quot; .NET"/>
 <node CREATED="1363024044206" FOLDED="true" ID="ID_649619303" MODIFIED="1446661720591" TEXT="Installare il runtime">
 <node CREATED="1361742013686" ID="ID_986879669" MODIFIED="1361742014796" TEXT="sudo apt-get install mono-runtime"/>
@@ -908,29 +909,29 @@
 <node CREATED="1361742725985" FOLDED="true" ID="ID_408401039" MODIFIED="1446661720593" TEXT="per provare se mono gira">
 <node CREATED="1412039471035" ID="ID_1647590970" MODIFIED="1412039476421" TEXT="mono -V"/>
 </node>
-<node CREATED="1414710737966" FOLDED="true" ID="ID_103813168" MODIFIED="1446661720593" TEXT="per compilare con mono di usa mcs">
-<node CREATED="1414710766749" FOLDED="true" ID="ID_592516517" MODIFIED="1446661720593" TEXT="es.">
+<node CREATED="1414710737966" FOLDED="true" ID="ID_103813168" MODIFIED="1448323966579" TEXT="per compilare con mono si usa mcs">
+<node CREATED="1414710766749" ID="ID_592516517" MODIFIED="1448323958653" TEXT="es.">
 <node CREATED="1414710768444" ID="ID_584756169" MODIFIED="1414710787738" TEXT="# mcs helloWorld.cs"/>
 </node>
 </node>
 <node CREATED="1414710788824" FOLDED="true" ID="ID_780637224" MODIFIED="1446661720593" TEXT="si pu&#xf2; anche compilare con VisualStudio e trasferire l&apos;exe sul Linux">
 <node CREATED="1414710833056" ID="ID_903162805" MODIFIED="1446593968864" TEXT="se non si usano classi del Framework che non sono state realizzate in mono, il programma funzioner&#xe0; anche sotto Linux."/>
 </node>
-<node CREATED="1446653970210" FOLDED="true" ID="ID_727129284" MODIFIED="1446661720594" TEXT="mono-complete">
-<node CREATED="1446653974402" ID="ID_139677033" MODIFIED="1446654058293" STYLE="fork" TEXT="se qualcosa manca nelle installazioni precedenti, l&apos;installazione di mono-complete lo aggiunge senz&apos;altro.."/>
-<node CREATED="1446654059667" FOLDED="true" ID="ID_1710829467" MODIFIED="1446661720593" TEXT="sudo apt-get install mono-complete">
-<node CREATED="1446654138834" ID="ID_432500066" MODIFIED="1446654659897" TEXT="&#xe8; piuttosto ingombrante (170 MByte!). Se non si ha spazio nella SDcard &#xe8; meglio installare pezzo per pezzo quelli che mancano. "/>
+<node CREATED="1446653974402" ID="ID_139677033" MODIFIED="1446654058293" STYLE="fork" TEXT="se qualcosa manca nelle installazioni precedenti, l&apos;installazione di mono-complete lo aggiunge senz&apos;altro..">
+<node CREATED="1446653970210" ID="ID_727129284" MODIFIED="1448323946843" TEXT="mono-complete"/>
+<node CREATED="1446654059667" ID="ID_1710829467" MODIFIED="1448323918655" TEXT="sudo apt-get install mono-complete">
+<node CREATED="1446654138834" ID="ID_432500066" MODIFIED="1448323932575" TEXT="&#xe8; piuttosto ingombrante (170 MByte!). Se non si ha spazio nella SDcard &#xe8; meglio installare pezzo per pezzo quelli che servono. "/>
 </node>
 </node>
 </node>
-<node CREATED="1446594224134" FOLDED="true" ID="ID_1925058303" MODIFIED="1446661720596" POSITION="right" TEXT="Installazione di node.js">
-<node CREATED="1446595633242" FOLDED="true" ID="ID_1376332630" MODIFIED="1446661720594" TEXT="Node.js&#xae; is a JavaScript runtime built on Chrome&apos;s V8 JavaScript engine">
+<node CREATED="1446594224134" FOLDED="true" ID="ID_1925058303" MODIFIED="1448323969296" POSITION="right" TEXT="Installazione di node.js">
+<node CREATED="1446595633242" ID="ID_1376332630" MODIFIED="1448323666579" TEXT="Node.js&#xae; is a JavaScript runtime built on Chrome&apos;s V8 JavaScript engine">
 <node CREATED="1446595692426" ID="ID_1415881117" MODIFIED="1446595692426" TEXT="an asynchronous event driven framework"/>
 <node CREATED="1446595706960" ID="ID_675376905" MODIFIED="1446595707908" TEXT="is designed to build scalable network applications"/>
 </node>
 <node CREATED="1446594239831" ID="ID_1242711718" MODIFIED="1446596672130" TEXT="&quot;Web server&quot; scritto in javascript, che usa javascript come linguaggio di programmazione"/>
-<node CREATED="1430867145249" FOLDED="true" ID="ID_1795689730" MODIFIED="1446661720596" TEXT="installazione">
-<node CREATED="1431448147181" FOLDED="true" ID="ID_1828102367" MODIFIED="1446661720594" TEXT="curl -sLS https://apt.adafruit.com/add | sudo bash">
+<node CREATED="1430867145249" ID="ID_1795689730" MODIFIED="1448323626184" TEXT="installazione">
+<node CREATED="1431448147181" ID="ID_1828102367" MODIFIED="1448323683215" TEXT="curl -sLS https://apt.adafruit.com/add | sudo bash">
 <font NAME="Courier New" SIZE="12"/>
 <node CREATED="1431448205442" ID="ID_1491089037" MODIFIED="1431448217051" TEXT="aggiorno la lista dei repository in /etc/apt/sources.list"/>
 <node CREATED="1446594952289" ID="ID_540760171" MODIFIED="1446594969356" TEXT="fatto perch&#xe8; era nel file di Castagnoli, forse non serve"/>
@@ -938,31 +939,40 @@
 <node CREATED="1430867203102" ID="ID_187841779" MODIFIED="1431448256514" TEXT="sudo apt-get install node">
 <font NAME="Courier New" SIZE="12"/>
 </node>
-<node CREATED="1430867203102" FOLDED="true" ID="ID_254261005" MODIFIED="1446661720595" TEXT="sudo apt-get install npm">
+<node CREATED="1430867203102" FOLDED="true" ID="ID_254261005" MODIFIED="1448323719830" TEXT="sudo apt-get install npm">
 <font NAME="Courier New" SIZE="12"/>
-<node CREATED="1430867861348" FOLDED="true" ID="ID_1013462637" MODIFIED="1446661720594" TEXT="installo il gestore di pacchetti per node">
-<node CREATED="1446595520171" MODIFIED="1446595520171" TEXT="npm, is the largest ecosystem of open source libraries in the world"/>
+<node CREATED="1430867861348" FOLDED="true" ID="ID_1013462637" MODIFIED="1448323709092" TEXT="installo npm, il gestore di pacchetti per node">
+<node CREATED="1446595520171" ID="ID_128644392" MODIFIED="1446595520171" TEXT="npm, is the largest ecosystem of open source libraries in the world"/>
 </node>
-<node CREATED="1446595377766" ID="ID_587031321" MODIFIED="1446595401697" TEXT="rispondere con s, minuscolo, perch&#xe8; S, maiuscolo, interrompre l&apos;installazione"/>
+<node CREATED="1446595377766" ID="ID_587031321" MODIFIED="1448323718516" TEXT="rispondere con s, minuscolo, perch&#xe8; S, maiuscolo, interrompe l&apos;installazione"/>
 </node>
-<node CREATED="1431447729254" FOLDED="true" ID="ID_281020965" MODIFIED="1446661720595" TEXT="verifica della versione installata">
+<node CREATED="1431447729254" ID="ID_281020965" MODIFIED="1448323634359" TEXT="verifica della versione installata">
 <node CREATED="1431447736332" ID="ID_243475650" MODIFIED="1431448269507" TEXT="node -v">
 <font NAME="Courier New" SIZE="12"/>
 </node>
+<node CREATED="1448323649974" ID="ID_10499793" MODIFIED="1448323654049" TEXT="mostra la versione"/>
 </node>
-<node CREATED="1442242217135" FOLDED="true" ID="ID_1298791512" MODIFIED="1446661720596" TEXT="prima cosa da fare">
-<node CREATED="1442242220329" FOLDED="true" ID="ID_429885188" MODIFIED="1446661720595" TEXT="avviare node e provare:">
-<node CREATED="1446595764277" FOLDED="true" ID="ID_1476739410" MODIFIED="1446661720595" TEXT="# node">
+<node CREATED="1442242217135" ID="ID_1298791512" MODIFIED="1448323636566" TEXT="prima cosa da fare">
+<node CREATED="1442242220329" ID="ID_429885188" MODIFIED="1448323729063" TEXT="avviare node e provare:">
+<node CREATED="1446595764277" ID="ID_1476739410" MODIFIED="1448323746935" TEXT="# node">
 <node CREATED="1446595770673" ID="ID_548683041" MODIFIED="1446595781420" TEXT="appare il prompt &gt;"/>
 </node>
-<node CREATED="1442242285445" ID="ID_703426597" MODIFIED="1446595789531" TEXT="&gt; 1+2"/>
-<node CREATED="1442242288826" ID="ID_1000379372" MODIFIED="1442242292830" TEXT="process.pid"/>
-<node CREATED="1442242313730" FOLDED="true" ID="ID_788171283" MODIFIED="1446661720595" TEXT="process">
-<node CREATED="1442242328857" ID="ID_944825772" MODIFIED="1442242336579" TEXT="stato di diverse variabili d&apos;ambiente"/>
+<node CREATED="1442242285445" ID="ID_703426597" MODIFIED="1446595789531" TEXT="&gt; 1+2">
+<node CREATED="1448323880374" ID="ID_144883812" MODIFIED="1448323881886" TEXT="3"/>
+<node CREATED="1448323883040" ID="ID_464928451" MODIFIED="1448323888472" TEXT="sa fare le somme!"/>
+</node>
+<node CREATED="1442242288826" ID="ID_1000379372" MODIFIED="1442242292830" TEXT="process.pid">
+<node CREATED="1448323770837" ID="ID_721467106" MODIFIED="1448323813812" TEXT="mostra il &quot;process IDentificator&quot; del processo che sta facendo girare node"/>
+</node>
+<node CREATED="1442242313730" ID="ID_788171283" MODIFIED="1448323733165" TEXT="process">
+<node CREATED="1442242328857" ID="ID_944825772" MODIFIED="1448323823704" TEXT="contiene lo stato di diverse variabili d&apos;ambiente"/>
+</node>
+<node CREATED="1442242288826" ID="ID_723259394" MODIFIED="1448323838507" TEXT="process.exit()">
+<node CREATED="1448323839373" ID="ID_488022045" MODIFIED="1448323863093" TEXT="serve per uscire dalla &quot;shell&quot; di node e tornare a bash"/>
 </node>
 </node>
 </node>
-<node CREATED="1430867845279" FOLDED="true" ID="ID_88227505" MODIFIED="1446661720596" TEXT="per installare il supporto di ws (?web sockets?)">
+<node CREATED="1430867845279" ID="ID_88227505" MODIFIED="1448323629079" TEXT="per installare il supporto di ws (?web sockets?)">
 <node CREATED="1430868256022" ID="ID_716754339" MODIFIED="1430868264540" TEXT="sudo npm config set registry http://registry.npmjs.org/ ">
 <font NAME="Courier New" SIZE="12"/>
 </node>
@@ -1248,7 +1258,7 @@ exit 0</pre>
 </node>
 </node>
 </node>
-<node CREATED="1356736455233" FOLDED="true" ID="ID_1882703059" MODIFIED="1446661720625" POSITION="right" TEXT="Istruzioni per la creazione di una SD contenente un&apos;immagine &quot;campione&quot;, da clonare">
+<node CREATED="1356736455233" FOLDED="true" ID="ID_1882703059" MODIFIED="1448323620465" POSITION="right" TEXT="Istruzioni per la creazione di una SD contenente un&apos;immagine &quot;campione&quot;, da clonare">
 <node CREATED="1411315083032" ID="ID_141303431" MODIFIED="1411315160395" TEXT="Quando il sistema &#xe8; configurato ed operativo, lo si pu&#xf2; &quot;fotografare&quot;, come backup, o per poterlo replicare uguale su altre Raspberry"/>
 <node CREATED="1370678921723" FOLDED="true" ID="ID_216955398" MODIFIED="1446661720623" TEXT="In Windows">
 <node CREATED="1370678939933" ID="ID_582349069" MODIFIED="1370678958465" TEXT="Installare il programma &quot;Win32 disk imager&quot;"/>
@@ -1486,14 +1496,14 @@ exit 0</pre>
 </node>
 <node CREATED="1362762879752" ID="ID_1004334407" MODIFIED="1362762912599" TEXT="controllare con ifconfig che gli alias siano configurati e funzionanti"/>
 </node>
-<node CREATED="1411316430380" FOLDED="true" ID="ID_850256543" MODIFIED="1446666767841" POSITION="left" TEXT="Configurazione di MySQL per uso a scuola">
-<node CREATED="1362408179269" FOLDED="true" ID="ID_616092015" MODIFIED="1446666766417" TEXT="password per l&apos;utente root del server MySql">
-<node CREATED="1362408200949" FOLDED="true" ID="ID_758396313" MODIFIED="1446661720625" TEXT="raspberry">
+<node CREATED="1411316430380" FOLDED="true" ID="ID_850256543" MODIFIED="1448323608337" POSITION="left" TEXT="Configurazione di MySQL per uso a scuola">
+<node CREATED="1362408179269" ID="ID_616092015" MODIFIED="1448323594945" TEXT="password per l&apos;utente root del server MySql">
+<node CREATED="1362408200949" ID="ID_758396313" MODIFIED="1448323597324" TEXT="raspberry">
 <node CREATED="1362516233181" ID="ID_1734804384" MODIFIED="1411316027257" TEXT="stessa password del computer, ma potrebbe essere diversa"/>
 </node>
 </node>
 <node CREATED="1362410825070" ID="ID_1844543349" MODIFIED="1362514298470" TEXT="siccome l&apos;utente root non &#xe8; abilitato per default all&apos;accesso da remoto, non si pu&#xf2; configurare MySql da remoto utilizzando lo stesso server mysql . &#xa;Per&#xf2; &#xe8; possibile collegarsi da remoto con un server SSH (es. PuTTY). Infatti il terminale &#xe8; un computer remoto, ma la shell &#xe8; eseguita dal computer locale (server Raspberry), per cui &#xe8; possibile usare l&apos;utente root dal client che gira nella shell remota. &#xa;Oppure si lavora da console, p.es utilizzando un TV, cavo HDMI e una tastiera USB. Ci si collega dalla console locale sul raspberry, nella shell che parte al boot."/>
-<node CREATED="1362411070219" FOLDED="true" ID="ID_321485992" MODIFIED="1446661720626" TEXT="nella shell, da console o da client SSH remoto, si lancia il client testuale di MySql, usando l&apos;utente root">
+<node CREATED="1362411070219" ID="ID_321485992" MODIFIED="1448323603634" TEXT="nella shell, da console o da client SSH remoto, si lancia il client testuale di MySql, usando l&apos;utente root">
 <node CREATED="1362412000252" ID="ID_1534393713" MODIFIED="1362509224572" TEXT="mysql -u &lt;user&gt; -p"/>
 <node CREATED="1362412036148" FOLDED="true" ID="ID_602363563" MODIFIED="1446661720625" TEXT="es.">
 <node CREATED="1362411084854" ID="ID_1698777505" MODIFIED="1362514310333" TEXT="$ mysql - u root -p"/>
@@ -1745,7 +1755,7 @@ iface lo inet loopback</pre>
 </node>
 </node>
 </node>
-<node CREATED="1366324098502" ID="ID_333082949" MODIFIED="1446666327631" POSITION="right" TEXT="ASP.NET">
+<node CREATED="1366324098502" FOLDED="true" ID="ID_333082949" MODIFIED="1448323490059" POSITION="right" TEXT="ASP.NET">
 <node CREATED="1366324104739" ID="ID_14674427" MODIFIED="1366324111632" TEXT="con server C#">
 <node CREATED="1446669603527" ID="ID_1126102914" MODIFIED="1446669720700" TEXT="xsp &#xe8; un server scritto in C#, che si pu&#xf2; usare per sviluppo e debugging. Non &#xe8; adatto ad un sito di produzione. "/>
 <node CREATED="1446669749293" ID="ID_1590884772" MODIFIED="1446669762934" TEXT="xsp2 &#xe8; per asp.net 2"/>
