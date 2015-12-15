@@ -17,7 +17,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1356636955633" FOLDED="true" ID="ID_761825239" MODIFIED="1446661720561" POSITION="right" TEXT="Configurazione headless &quot;da zero&quot;">
+<node CREATED="1356636955633" ID="ID_761825239" MODIFIED="1449957368648" POSITION="right" TEXT="Configurazione headless &quot;da zero&quot;">
 <node CREATED="1446589298485" ID="ID_674785069" MODIFIED="1446589324281" TEXT="E&apos; stato installato il Raspbian del Settembre 2015"/>
 <node CREATED="1356636977035" ID="ID_866445894" MODIFIED="1356639532233" TEXT="Connettere il raspi alla Ethernet, con un server DHCP del quale si pu&#xf2; vedere il log"/>
 <node CREATED="1356639532900" ID="ID_885597228" MODIFIED="1356639569719" TEXT="Alimentare il raspi, si accendono i LED relativi alla rete"/>
@@ -36,10 +36,10 @@
 <node CREATED="1356637166724" ID="ID_1715841156" MODIFIED="1356637170942" TEXT="raspberry"/>
 </node>
 </node>
-<node CREATED="1356637430095" FOLDED="true" ID="ID_1807659478" MODIFIED="1446661720560" TEXT="Esecuzione del programma di configurazione">
+<node CREATED="1356637430095" ID="ID_1807659478" MODIFIED="1449957393991" TEXT="Esecuzione del programma di configurazione">
 <node CREATED="1361031250019" ID="ID_1608441541" MODIFIED="1361031327866" TEXT="se abbiamo monitor e tastiera la prima volta parte automaticamente il programma di configurazione"/>
-<node CREATED="1356637453822" FOLDED="true" ID="ID_1149703422" MODIFIED="1446661720553" TEXT="se configuriamo un sistema headless, si finisce in una normale shell. Come consigliato al boot">
-<node CREATED="1356639881511" FOLDED="true" ID="ID_1731852722" MODIFIED="1446661720553" TEXT="eseguire">
+<node CREATED="1356637453822" ID="ID_1149703422" MODIFIED="1449957398287" TEXT="se configuriamo un sistema headless, si finisce in una normale shell. Come consigliato al boot">
+<node CREATED="1356639881511" ID="ID_1731852722" MODIFIED="1449957399132" TEXT="eseguire">
 <node CREATED="1356637444154" ID="ID_349659770" MODIFIED="1356637445121" TEXT="sudo raspi-config"/>
 </node>
 </node>
@@ -177,7 +177,7 @@
 <node CREATED="1362406995358" ID="ID_673346401" MODIFIED="1362417326863" TEXT="sudo passwd pi"/>
 <node CREATED="1412033090870" ID="ID_866712052" MODIFIED="1412033095510" TEXT="se serve"/>
 </node>
-<node CREATED="1357127416679" FOLDED="true" ID="ID_28344809" MODIFIED="1446661720560" TEXT="Cambiare il nome al computer">
+<node CREATED="1357127416679" ID="ID_28344809" MODIFIED="1449957383211" TEXT="Cambiare il nome al computer">
 <node CREATED="1446591358746" ID="ID_1080940161" MODIFIED="1446591374406" TEXT="se si vuole cambiare nome dopo l&apos;installazione: "/>
 <node CREATED="1361033887371" FOLDED="true" ID="ID_362193859" MODIFIED="1446661720560" TEXT="modificare il file /etc/hostname">
 <node CREATED="1361033867039" ID="ID_694009186" MODIFIED="1361033867039">
@@ -214,8 +214,7 @@
 <node CREATED="1411314533741" ID="ID_1425619124" MODIFIED="1411314545252" TEXT="adduser &lt;nome del nuovo utente&gt;"/>
 </node>
 </node>
-<node CREATED="1446598377070" ID="ID_1235328845" MODIFIED="1446598401566" POSITION="right" TEXT="!!!! CONFIGURAZIONE RETE PER LAB 13 ANCORA DA FARE !!!!"/>
-<node CREATED="1362407579091" ID="ID_1264442117" MODIFIED="1448323974613" POSITION="right" TEXT="Configurazione dell&apos;interfaccia di rete">
+<node CREATED="1362407579091" FOLDED="true" ID="ID_1264442117" MODIFIED="1449956408127" POSITION="right" TEXT="Configurazione dell&apos;interfaccia di rete">
 <node CREATED="1362407780625" ID="ID_410364146" MODIFIED="1448323975486" TEXT="configurazione con indirizzo IP dinamico">
 <node CREATED="1394472297114" FOLDED="true" ID="ID_1047720353" MODIFIED="1446661720561" TEXT="impostata di default">
 <node CREATED="1362408095562" ID="ID_518052469" MODIFIED="1412033225318" TEXT="nel file /etc/network/interfaces"/>
@@ -286,8 +285,7 @@
       gateway 10.13.0.254
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -301,14 +299,14 @@
 <node CREATED="1394477084095" ID="ID_627840899" MODIFIED="1394477114466" TEXT="# sudo ifconfig eth0 up"/>
 </node>
 </node>
-<node CREATED="1362832331797" FOLDED="true" ID="ID_1236788913" MODIFIED="1446661720563" TEXT="indirizzi dei server DNS">
-<node CREATED="1362832521317" FOLDED="true" ID="ID_1087925179" MODIFIED="1446661720563" TEXT="modificare /etc/resolv.conf">
+<node CREATED="1362832331797" ID="ID_1236788913" MODIFIED="1448324342737" TEXT="indirizzi dei server DNS">
+<node CREATED="1362832521317" ID="ID_1087925179" MODIFIED="1448324344312" TEXT="modificare /etc/resolv.conf">
 <node CREATED="1362832521317" ID="ID_999483608" MODIFIED="1363029649283" STYLE="fork" TEXT="sudo nano /etc/resolv.conf"/>
-<node CREATED="1362832587420" FOLDED="true" ID="ID_1004600470" MODIFIED="1446661720563" TEXT="aggiunto nella prima riga:">
+<node CREATED="1362832587420" ID="ID_1004600470" MODIFIED="1448324346222" TEXT="aggiunto nella prima riga:">
 <node CREATED="1362832606644" ID="ID_1132671706" MODIFIED="1446592115631" TEXT="10.13.0.254"/>
 </node>
 </node>
-<node CREATED="1362832350371" ID="ID_1263605277" MODIFIED="1412034833590" TEXT="aggiunto hagrid come primo server DNS"/>
+<node CREATED="1362832350371" ID="ID_1263605277" MODIFIED="1448325240782" TEXT="aggiunto il server DNS della rete ITI come primo server DNS del raspi."/>
 </node>
 </node>
 <node CREATED="1362406953971" FOLDED="true" ID="ID_720375592" MODIFIED="1446661758514" POSITION="right" TEXT="aggiornamenti vari (da fare prima di tutte le nuove installazioni di programmi)">
@@ -983,6 +981,9 @@
 </node>
 </node>
 </node>
+<node CREATED="1449956418964" ID="ID_1598904242" MODIFIED="1449956427944" POSITION="right" TEXT="Installazione di Asterisk">
+<node CREATED="1449956428720" ID="ID_373774796" MODIFIED="1449956443634" TEXT="fatta da Castagnoli, da documentare"/>
+</node>
 <node CREATED="1356640065186" FOLDED="true" ID="ID_742874669" MODIFIED="1446661720601" POSITION="right" TEXT="Installazione e configurazione di VNC">
 <node CREATED="1356640282260" FOLDED="true" ID="ID_664690088" MODIFIED="1446661720597" TEXT="installare tightvnc">
 <node CREATED="1356640243199" ID="ID_1538279865" MODIFIED="1356640244147" TEXT="sudo apt-get install tightvncserver"/>
@@ -1226,7 +1227,7 @@ exit 0</pre>
 <node CREATED="1394487486112" ID="ID_744132618" MODIFIED="1411987926641" TEXT="sudo apt-get clean"/>
 <node CREATED="1394487505093" ID="ID_1448297896" MODIFIED="1394487515244" TEXT="Cancella i file di installazione"/>
 </node>
-<node CREATED="1363007740758" FOLDED="true" ID="ID_1731962922" MODIFIED="1446661720615" POSITION="right" TEXT="Python">
+<node CREATED="1363007740758" FOLDED="true" ID="ID_1731962922" MODIFIED="1449956455178" POSITION="right" TEXT="Python">
 <node CREATED="1411329911656" ID="ID_1896242429" MODIFIED="1412038697567" TEXT="Nel Raspberry PI, Python &#xe8; gi&#xe0; installato all&apos;inizio"/>
 <node CREATED="1363012513260" FOLDED="true" ID="ID_1194838198" MODIFIED="1446661720615" TEXT="Per creare un Web server con una riga di codice basta usare python">
 <node CREATED="1363012538643" ID="ID_1845608556" MODIFIED="1363012618081" TEXT="Si lancia il programma Python SimpleHTTPServer, che fornir&#xe0; le pagine HTML comprese nella cartella corrente"/>
@@ -1258,7 +1259,7 @@ exit 0</pre>
 </node>
 </node>
 </node>
-<node CREATED="1356736455233" FOLDED="true" ID="ID_1882703059" MODIFIED="1448323620465" POSITION="right" TEXT="Istruzioni per la creazione di una SD contenente un&apos;immagine &quot;campione&quot;, da clonare">
+<node CREATED="1356736455233" FOLDED="true" ID="ID_1882703059" MODIFIED="1449956465395" POSITION="right" TEXT="Istruzioni per la creazione di una SD contenente un&apos;immagine &quot;campione&quot;, da clonare">
 <node CREATED="1411315083032" ID="ID_141303431" MODIFIED="1411315160395" TEXT="Quando il sistema &#xe8; configurato ed operativo, lo si pu&#xf2; &quot;fotografare&quot;, come backup, o per poterlo replicare uguale su altre Raspberry"/>
 <node CREATED="1370678921723" FOLDED="true" ID="ID_216955398" MODIFIED="1446661720623" TEXT="In Windows">
 <node CREATED="1370678939933" ID="ID_582349069" MODIFIED="1370678958465" TEXT="Installare il programma &quot;Win32 disk imager&quot;"/>
@@ -1755,7 +1756,7 @@ iface lo inet loopback</pre>
 </node>
 </node>
 </node>
-<node CREATED="1366324098502" FOLDED="true" ID="ID_333082949" MODIFIED="1448323490059" POSITION="right" TEXT="ASP.NET">
+<node CREATED="1366324098502" FOLDED="true" ID="ID_333082949" MODIFIED="1449956467480" POSITION="right" TEXT="ASP.NET">
 <node CREATED="1366324104739" ID="ID_14674427" MODIFIED="1366324111632" TEXT="con server C#">
 <node CREATED="1446669603527" ID="ID_1126102914" MODIFIED="1446669720700" TEXT="xsp &#xe8; un server scritto in C#, che si pu&#xf2; usare per sviluppo e debugging. Non &#xe8; adatto ad un sito di produzione. "/>
 <node CREATED="1446669749293" ID="ID_1590884772" MODIFIED="1446669762934" TEXT="xsp2 &#xe8; per asp.net 2"/>
