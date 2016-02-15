@@ -1,0 +1,5 @@
+*.pdb
+Common.Logging.Core.dll
+Common.Logging.dll
+GorCommon.dll
+GorDevices.dll
