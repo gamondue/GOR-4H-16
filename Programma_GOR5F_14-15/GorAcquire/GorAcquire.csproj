@@ -50,9 +50,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Raspberry.System">
-      <HintPath>..\..\..\raspberry-sharp-io\packages\Raspberry.System.2.0.0\lib\net40\Raspberry.System.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
