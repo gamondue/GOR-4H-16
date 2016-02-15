@@ -207,9 +207,10 @@ namespace Gor.Acquisition.Daemon
                         }
                         Common.logger.Debug("Acquire_1_20");
                     }
-                    catch
+                    catch (Exception ex)
                     {
-
+                        Common.logger.Error("Errore nella lettura di un sensore" + 
+                            ex.Message);
                     }
                 }
                 Common.logger.Debug("Acquire_1_30");
