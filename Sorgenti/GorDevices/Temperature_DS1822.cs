@@ -21,14 +21,17 @@ namespace Gor.Devices
         {
             Logger.Debug("Temperature_DS1822_Constructor con ID. SensorId: " + SensorId);
             // creazione del termometro con l'Id passato
-            try
+            if (!Simulation)
             {
-                termometro = new Ds18b20Connection(SensorId);
-            } 
-            catch (Exception ex)
-            {
-                Logger.Error("Temperature_DS1822_Constructor con ID. SensorId" + ex.Message);
-                return;
+                try
+                {
+                    termometro = new Ds18b20Connection(SensorId);
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error("Temperature_DS1822_Constructor con ID. SensorId" + ex.Message);
+                    return;
+                }
             }
             IdSensor = SensorId;
             Initialization();
@@ -45,15 +48,18 @@ namespace Gor.Devices
             : base(Name, Simulation, Logger)
         {
             Logger.Debug("Temperature_DS1822_Constructor senza ID. SensorId automatico");
-            // creazione del termometro; se il parametro DeviceIndex = 0 usa il primo sensore che trova
-            try
+            if (!Simulation)
             {
-                termometro = new Ds18b20Connection(0);
-            }
-            catch (Exception ex)
-            {
-                Logger.Error("Temperature_DS1822_Constructor senza ID. " + ex.Message);
-                return; 
+                // creazione del termometro; se il parametro DeviceIndex = 0 usa il primo sensore che trova
+                try
+                {
+                    termometro = new Ds18b20Connection(0);
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error("Temperature_DS1822_Constructor senza ID. " + ex.Message);
+                    return;
+                }
             }
             Initialization();
         }
