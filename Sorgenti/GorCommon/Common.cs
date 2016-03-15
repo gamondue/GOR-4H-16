@@ -36,7 +36,8 @@ namespace Gor
             } 
             else
             {
-                ProgramPath = @"c:\home\pi\gor\GorAcquire\";    // path of program in PC
+                //ProgramPath = @"c:\home\pi\gor\GorAcquire\";    // path of program in PC
+                ProgramPath = @".\";    // path of program in PC
                 LogsPath = ProgramPath + @"logs\";   // path of logs in PC
                 sensorsSimulation = true; 
             }
