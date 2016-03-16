@@ -1,3 +1,5 @@
-*.exe.config
-*.vshost.exe
-*.vshost.exe.manifest
+*
+!/logs
+!.gitignore
+!configurazione.tsv
+!.dll
