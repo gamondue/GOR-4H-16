@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GorAcquire", "GorAcquire\GorAcquire.csproj", "{BA0F43D2-8A57-41A4-94CB-018EA2FB5D9E}"
 EndProject
@@ -31,6 +31,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebApp(1)", "http://localho
 		SlnRelativePath = "WebApp\"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8E5D10F7-4EE9-40C7-BFA4-E90D50372223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Gpio.DigitalInput", "Tests\Test.Gpio.DigitalInput\Test.Gpio.DigitalInput.csproj", "{C8A586D2-6FBD-41CB-924C-D05F39962ADE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,8 +57,15 @@ Global
 		{82A813AC-03BE-40BD-BB92-1BFC3D4A028A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82A813AC-03BE-40BD-BB92-1BFC3D4A028A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{82A813AC-03BE-40BD-BB92-1BFC3D4A028A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C8A586D2-6FBD-41CB-924C-D05F39962ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A586D2-6FBD-41CB-924C-D05F39962ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A586D2-6FBD-41CB-924C-D05F39962ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A586D2-6FBD-41CB-924C-D05F39962ADE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C8A586D2-6FBD-41CB-924C-D05F39962ADE} = {8E5D10F7-4EE9-40C7-BFA4-E90D50372223}
 	EndGlobalSection
 EndGlobal

@@ -73,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Digital_Io.cs" />
     <Compile Include="Humidity_Temperature_Air_DHT22.cs" />
     <Compile Include="Measurement.cs" />
     <Compile Include="Sensor.cs" />
