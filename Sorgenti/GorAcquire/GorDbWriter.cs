@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gor.Acquisition.Daemon
 {
@@ -16,7 +13,7 @@ namespace Gor.Acquisition.Daemon
         int endRead = 100;
 
         string connectionString = "METTERE QUA LA CONNECTION STRING";
-        List<Sensor> Sensori; 
+        List<Gor.Devices.Sensor> Sensori; 
 
         public GorDbWriter()
         {
@@ -56,9 +53,9 @@ namespace Gor.Acquisition.Daemon
             }
         }
 
-        public bool SaveAll(List<Sensor> Sensori)
+        public bool SaveAll(List<Gor.Devices.Sensor> Sensori)
         {
-            foreach (Sensor s in Sensori)
+            foreach (Gor.Devices.Sensor s in Sensori)
             {
                 string IdSensore = s.GotCode;
                 foreach (Measurement m in s.LastMeasurements)

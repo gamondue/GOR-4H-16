@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using Gor.Devices;
 
-namespace Gor
+namespace Gor.Devices
 {
     public abstract class Sensor
     {
