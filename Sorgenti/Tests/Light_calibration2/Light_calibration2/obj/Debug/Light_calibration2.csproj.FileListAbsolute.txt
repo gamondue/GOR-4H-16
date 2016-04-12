@@ -1,6 +1,0 @@
-C:\Users\enrico.gozzi\Desktop\Light_calibration2\Light_calibration2\bin\Debug\Light_calibration2.exe.config
-C:\Users\enrico.gozzi\Desktop\Light_calibration2\Light_calibration2\obj\Debug\Light_calibration2.csprojResolveAssemblyReference.cache
-C:\Users\enrico.gozzi\Desktop\Light_calibration2\Light_calibration2\bin\Debug\Light_calibration2.exe
-C:\Users\enrico.gozzi\Desktop\Light_calibration2\Light_calibration2\bin\Debug\Light_calibration2.pdb
-C:\Users\enrico.gozzi\Desktop\Light_calibration2\Light_calibration2\obj\Debug\Light_calibration2.exe
-C:\Users\enrico.gozzi\Desktop\Light_calibration2\Light_calibration2\obj\Debug\Light_calibration2.pdb
