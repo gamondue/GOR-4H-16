@@ -1,0 +1,29 @@
+{
+  "data": [
+    [
+      "Temperatura",
+      "IdTermometro",
+      "34 C"
+    ],
+    [
+      "Umidita' dell'aria(HIH4000)",
+      "Canale ADC",
+      "22%"
+    ],
+    [
+      "Umidita' dell'aria(DHT22)",
+      "PinIoRaspiGOT",
+      "31%"
+    ],
+    [
+      "Umidita' del terreno",
+      "Canale ADC",
+      "65%"
+    ],
+    [
+      "Luminosita'",
+      "Canale ADC",
+      "40 lux"
+    ]
+  ]
+}
