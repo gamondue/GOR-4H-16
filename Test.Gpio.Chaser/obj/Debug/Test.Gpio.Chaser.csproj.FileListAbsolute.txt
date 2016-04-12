@@ -1,0 +1,17 @@
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Test.Gpio.Chaser.exe
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Test.Gpio.Chaser.pdb
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.IO.exe.CodeAnalysisLog.xml
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Test.Gpio.Chaser.exe.lastcodeanalysissucceeded
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.IO.GeneralPurpose.dll
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.IO.dll
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.System.dll
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.IO.Interop.dll
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.IO.GeneralPurpose.pdb
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.IO.GeneralPurpose.xml
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.IO.pdb
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.IO.xml
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.System.xml
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\bin\Debug\Raspberry.IO.Interop.pdb
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\obj\Debug\Test.Gpio.Chaser.csprojResolveAssemblyReference.cache
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\obj\Debug\Test.Gpio.Chaser.exe
+C:\Users\anthonyalex.magno\Desktop\raspberry-sharp-io-master\Tests\Test.Gpio.Chaser\obj\Debug\Test.Gpio.Chaser.pdb
