@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="jquery.js">
+    </script>
+    <script type="text/javascript">
+$(document).ready(function()
+{
+	var wsUri = "ws://10.13.10.14:8080";
+
+
+    websocket = new WebSocket(wsUri);
+    websocket.onopen = function (evt) {
+        $("#log").append("Connesso<br>");
+        websocket.send("Connesso");
+    };
+    websocket.onclose = function (evt) {
+        $("#log").append("Disconnesso<br>");
+    };
+    websocket.onmessage = function (evt) {        
+        
+        
+        var dato = JSON.parse(evt.data);
+		for (var parola in dato){
+		$('#ComboBox1').append($('<option>', {
+			value:parola,
+			text: parola
+		}));
+		
+		}
+		/*$('#ComboBox1').append($('<option>', {
+			value:dato.lumunisita,
+			text: dato.lumunisita
+		}));
+		$('#ComboBox1').append($('<option>', {
+			value:dato.umidita,
+			text: dato.umidita
+		}));
+		$('#ComboBox1').append($('<option>', {
+			value:dato.tmpAmbiente,
+			text: dato.tempAmbiente
+		}));
+		*/
+
+        
+    };
+	var fase;
+	var nomeFile;
+	
+    
+    $("#btnSeleziona").click(function () {
+        websocket.send("Connesso");
+		alert("Connesso");
+	});
+	$("#btnAvvia").click(function () {
+        fase ="s";
+	});
+	$("#btnPuntoTaratura").click(function () {
+        fase ="p " + "da definire";
+	});
+	$("#btnChiusura").click(function () {
+       fase ="t";
+	});
+	$("#btnChiusura").click(function () {
+	var exec = require('child_process').exec,
+    child;
+	
+	
+	child = exec(nomeFile + " " + fase, // command line argument directly in string
+	  function (error, stdout, stderr) {      // one easy function to capture data/errors
+    var taratura1 = stdout);
+    console.log('Risultato dello stderr: ' + stderr);
+    if (error !== null) {
+      console.log('exec error: ' + error);
+    }
+});
+        var valore1= #txtPuntoInput1.val; 
+	var valore2=#txtPuntoInput2.val; 
+
+	var filename = "c:/mytest_filesystem/mydata.txt"; 
+
+	function WriteToFile() 
+	{ 
+	var fso = new ActiveXObject("Scripting.FileSystemObject"); 
+	// se il file esiste aggiunge due righe 
+	// con il contenuto delle variabili nome/cognome 
+	if (fso.FileExists(filename)) 
+	{ 
+	var a, ForAppending, file; 
+	ForAppending = 8; 
+	file = fso.OpenTextFile(filename, ForAppending, false); 
+	file.WriteLine(valore1 + " " + taratura1 ); 
+	
+	
+	
+	} 
+	//Se non esiste crea il file e 
+	// aggiunge due righe 
+	// con il contenuto delle variabili nome/cognome 
+	else 
+	{ 
+	var file = fso.CreateTextFile(filename, true); 
+	file.WriteLine(cognome); 
+	file.WriteLine(cognome); 
+	} 
+	file.Close(); 
+} 
+	});
+	("#ComboBox1").change(function()
+	{
+	    nomeFile = $("#ComboBox1").prop("value");
+	    
+		
+	});
+    
+		
+		
+        
+        
+	   
+	})
+
+
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div style="height: 341px; width: 838px">
+            <select id="ComboBox1" style="position:absolute; left:50px; top:50px">
+                <option value="Temperatura">Temperatura</option>
+                <option value="Umidità aria">Umidità aria</option>
+                <option value="Umidità terreno">Umidità terreno</option>
+                <option value="Luce">Luce</option>
+            </select>
+            <label id="lblNomeSensore" text="Label" style="position:absolute; left:290px; top:56px; width: 143px; height: 19px;">Label</label>
+            <label ID="lblInterfaccia" text="Label" style="position:absolute; left:550px; top:56px; width: 84px; height: 19px;">Label</label>
+            <button ID="btnSeleziona" type="button" text="Seleziona" style="position:absolute; left:50px; top:100px; width: 107px; height: 24px;">Seleziona</button>
+            <label id="lblUnitàDiMisura" text="Label" style="position:absolute; left:290px; top:106px; width: 84px; height: 19px;">Label</label>
+            <label ID="lblPendenza" text="Label" style="position:absolute; left:420px; top:106px; width: 84px; height: 19px;">Label</label>
+            <label ID="lblValoraZero" text="Label" style="position:absolute; left:550px; top:106px; width: 84px; height: 19px;">Label</label>
+            <button ID="btnAvvia" type="button" text="Avvia Taratura" style="position:absolute; left:50px; top:200px; width: 107px; height: 24px;">Avvia taratura</button>
+            <button ID="btnPuntoTaratura" type="button" text="Punto Taratura" style="position:absolute; left:50px; top:250px; width: 107px; height: 24px;">Punto taratura</button>
+            <input ID="txtPuntoInput" type="text" style="position:absolute; left:290px; top:250px; width: 107px; height: 24px;">
+            <label ID="Label1" text="Label" style="position:absolute; left:420px; top:250px; width: 84px; height: 19px;">Label</label>
+            <button ID="btnChiusura" type="button" text="Fine Taratura" style="position:absolute; left:50px; top:300px; width: 107px; height: 24px;">Fine taratura</button>
+            <input ID="txtPuntoInput2" type="text" style="position:absolute; left:290px; top:300px; width: 107px; height: 24px;">
+            <label ID="Label2" text="Label" style="position:absolute; left:420px; top:300px; width: 84px; height: 19px;">Label</label>
+            <button ID="btnAbort" type="button" text="Abort All" style="position:absolute; left:600px; top:300px; width: 107px; height: 24px;">Abort All</button>
+        </div>
+        
+        
+
+    </form>
+    
+</body>
+</html>
