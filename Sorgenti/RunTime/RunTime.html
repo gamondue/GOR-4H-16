@@ -1,0 +1,108 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+<style>
+      h1 {
+       font-family: 'Poiret One', cursive;
+        font-size: 48px;
+		text-shadow: 4px 4px 4px #aaa;
+		color:#038028;
+      }
+</style>
+<h1 style="text-align:center" >Lettura sensori</h1>
+<div style="clear:both;"></div>
+
+<script type = "text/javascript" src = "jquery.js"></script>
+<script type = "text/javascript">
+$(document).ready(function()
+{
+    var wsUri = "ws://10.13.10.14:8080";
+
+
+    websocket = new WebSocket(wsUri);
+    websocket.onopen = function (evt) {
+        $("#log").append("Connesso<br>");
+        websocket.send("Connesso");
+    };
+    websocket.onclose = function (evt) {
+        $("#log").append("Disconnesso<br>");
+    };
+    websocket.onmessage = function (evt) {        
+        //qui ho disponibile l'oggetto JSON che mi ha inviato il gruppo 2
+        
+        var dato = JSON.parse(evt.data);    //eseguo il parse dei dati dell'oggetto ricevuto
+
+        //$("#log").append('<div style="color: blue;">Risposta: ' + Object.keys(dato)[0] + '</div>');
+        $("#spanUmidita").html(dato.umidita + "%");
+        $("#spanLuminosita").html(dato.luminosita + " lux");
+        $("#spanTemperaturaAmbiente").html(dato.tempAmbiente + " C");
+        //$("#spanTemperaturaTerra").html(dato.tempTerra + " C");
+    };
+    websocket.onerror = function (evt) {
+        $("#log").append('<div style="color: red;">ERROR: </div> ' + evt.data);
+    };
+    
+    $("#btnLeggi").click(function () {
+        websocket.send("Connesso");
+	});
+    
+});
+</script>
+    <meta http-equiv="refresh" content="30">
+</head>
+<body>
+<div>
+    	
+<div id="output">
+<style>
+table { width: 100%; background-color: #FFFFFF; color: #000000; border-color: #0FFF8F; border-collapse: collapse; }
+th, td { width: 25%; }
+</style>
+<table border="1" style="border: 3px solid #038028;">
+	<tr>
+		<td><img src="umidita.png" width="65" height="65" /></td>
+		<td>Valore Umidita':</td>
+		<td><span id="spanUmidita">Non ancora acquisito</span></td>
+	</tr>
+	
+	<tr>
+		<td><img src="luminosita.jpg" width="65" height="65" /></td>
+		<td>Valore Luminosita':</td>
+		<td><span id="spanLuminosita">Non ancora acquisito</span></td>
+	</tr>
+	
+	<tr>
+		<td><img src="temp ambientale.png" width="65" height="65" /></td>
+		<td>Temperatura Ambientale:</td>
+		<td><span id="spanTemperaturaAmbiente">Non ancora acquisito</span></td>
+	</tr>
+	
+	<tr>
+		<td> <img src="TempTerreno.png" width="65" height="65" /> </td>
+		<td>Temperatura Terrreno:</td>
+		<td><span id="spanTemperaturaTerra">Non ancora acquisito</span></td>
+	</tr>
+	
+	<tr>
+		<td><img src="connessione.png" width="65" height="65" /></td>
+		<td>CONNESSO:</td>
+		<td><div id="log"></td>
+	</tr>
+	
+	<tr>
+		<td><img src="comunicazione server.png" width="65" height="65" /></td>
+		<td>Risposta Server:</td>
+		<td><div id="log"></div></td>
+	</tr>
+
+</div>
+</table>
+<br>
+<INPUT TYPE="button" style="display: block;
+margin: 0 auto;
+border-radius: 50px 50px 50px 50px; 
+-moz-border-radius: 50px 50px 50px 50px; 
+-webkit-border-radius: 50px 50px 50px 50px; 
+border: 3px solid #038028; width: 200px;  height: 50px;" onClick="history.go(0)" VALUE="Refresh">
+</body>
+</html>
