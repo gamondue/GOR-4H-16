@@ -78,7 +78,7 @@
   <ItemGroup>
     <Reference Include="Raspberry.IO.GeneralPurpose, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\dll\Raspberry.IO.GeneralPurpose.dll</HintPath>
+      <HintPath>..\..\..\dll\Raspberry.IO.GeneralPurpose.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>

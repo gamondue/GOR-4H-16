@@ -12,7 +12,7 @@ namespace Test.Gpio.DigitalInput
     {
         static void Main(string[] args)
         {
-            ConnectorPin connPin1 = ConnectorPin.P1Pin40;
+            ConnectorPin connPin1 = ConnectorPin.P1Pin37;
             ProcessorPin procPin1 = connPin1.ToProcessor();
 
             ConnectorPin connPin2 = ConnectorPin.P1Pin38;

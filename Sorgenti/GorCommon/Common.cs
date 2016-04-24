@@ -30,7 +30,7 @@ namespace Gor
             OperatingSystem SystemInfo = Environment.OSVersion;
             if (SystemInfo.Platform == System.PlatformID.Unix)
             {
-                ProgramPath = "/home/pi/GOR5F_15-16/GorAcquire/";      // path of program in Raspi
+                ProgramPath = "/home/pi/GOR4H_15-16/GorAcquire/";      // path of program in Raspi
                 LogsPath = ProgramPath + "logs/";   // path of logs in Raspi
                 sensorsSimulation = false;
             } 

@@ -17,9 +17,9 @@ namespace Test.Gpio.Chaser
             const ConnectorPin led3Pin = ConnectorPin.P1Pin29;
             const ConnectorPin led4Pin = ConnectorPin.P1Pin31;
             const ConnectorPin led5Pin = ConnectorPin.P1Pin33;
-            const ConnectorPin led6Pin = ConnectorPin.P1Pin35;
-            const ConnectorPin buttonPin = ConnectorPin.P1Pin40;
-            
+            const ConnectorPin led6Pin = ConnectorPin.P1Pin40;
+            const ConnectorPin buttonPin = ConnectorPin.P1Pin37;
+
             Console.WriteLine("Chaser Sample: Sample a LED chaser with a switch to change behavior");
             Console.WriteLine();
             Console.WriteLine("\tLed 1: {0}", led1Pin);

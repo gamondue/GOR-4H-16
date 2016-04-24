@@ -36,22 +36,22 @@
   <ItemGroup>
     <Reference Include="Raspberry.IO, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\dll\Raspberry.IO.dll</HintPath>
+      <HintPath>..\..\..\dll\Raspberry.IO.dll</HintPath>
     </Reference>
     <Reference Include="Raspberry.IO.Components">
-      <HintPath>..\..\dll\Raspberry.IO.Components.dll</HintPath>
+      <HintPath>..\..\..\dll\Raspberry.IO.Components.dll</HintPath>
     </Reference>
     <Reference Include="Raspberry.IO.GeneralPurpose, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\dll\Raspberry.IO.GeneralPurpose.dll</HintPath>
+      <HintPath>..\..\..\dll\Raspberry.IO.GeneralPurpose.dll</HintPath>
     </Reference>
     <Reference Include="Raspberry.IO.Interop, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\dll\Raspberry.IO.Interop.dll</HintPath>
+      <HintPath>..\..\..\dll\Raspberry.IO.Interop.dll</HintPath>
     </Reference>
     <Reference Include="Raspberry.System, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\dll\Raspberry.System.dll</HintPath>
+      <HintPath>..\..\..\dll\Raspberry.System.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
