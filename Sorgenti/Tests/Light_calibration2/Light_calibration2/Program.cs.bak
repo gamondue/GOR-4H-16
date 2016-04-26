@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 //Gozzi-Romanino 4°H
 namespace Light_Calibration
 {
@@ -20,40 +19,36 @@ namespace Light_Calibration
             DateTime data = DateTime.Now;
 
             Measurement m = sensore.Measure()[0];
-           
+           // string riga = (data + "\t" + "Letto: Lux" + "\t" + m.Value);
             System.IO.StreamWriter file = new System.IO.StreamWriter(@"test.txt", true);
 
-            string riga =Convert.ToString(m.Value);
-           
-            //string temp;
+
+           // Console.WriteLine(riga);
+            string temp;
             // do
-            /*{
+            {
                 temp = Console.ReadLine();
                 if (temp != "")
-                    file.WriteLine(riga  + "\t" + "Campionatura:" + "\t" + temp );
+                    file.WriteLine(m.Value + "\t" + "Campionatura: Lux" + "\t" + temp);
                 // file.WriteLine(temp);
-            }*/
+            }
             // while (temp != "");
-             //file.WriteLine(temp + riga );
-             
-            string b =args[0];
-   
-            switch(b)
+            // file.WriteLine(temp + riga );
+            file.Close();
+            string b = Console.ReadLine();
+            int a = int.Parse(b);
+            switch(a)
             {
-                    
-                case "s":
-                    File.Delete(@"test.txt");
-                    file = new System.IO.StreamWriter(@"test.txt", true);
+                case 1:
+                    Console.WriteLine("Letto: Lux" + m.Value + "\t" + "Campionatura: Lux" + "\t" + temp);
                     break;
-                case "p":
-                    file.WriteLine(riga + "\t" + "Campionatura:" + "\t" + args[1]);
-                    file.WriteLine(m.Value);
+                case 2:
+                    Console.WriteLine("Letto: Lux" + "\t" + m.Value);
                     break;
-                case "t":
-                    Console.WriteLine("coming soon!!!!");
+                case 3:
+                    Console.WriteLine("coming soon");
                     break;
             }
-            file.Close();
         }
 
     }
