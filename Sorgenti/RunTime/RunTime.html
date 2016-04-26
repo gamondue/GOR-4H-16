@@ -28,7 +28,7 @@ $(document).ready(function()
         $("#log").append("Disconnesso<br>");
     };
     websocket.onmessage = function (evt) {        
-        //qui ho disponibile l'oggetto JSON che mi ha inviato il gruppo 2
+        //$qui ho disponibile l'oggetto JSON che mi ha inviato il gruppo 2
         
         var dato = JSON.parse(evt.data);    //eseguo il parse dei dati dell'oggetto ricevuto
 
@@ -44,11 +44,36 @@ $(document).ready(function()
     
     $("#btnLeggi").click(function () {
         websocket.send("Connesso");
-	});
-    
+	}); 
+	$("#salva").click(function(){
+		var wsUri = "ws://10.13.10.19:8080";
+		var output;
+		websocket = new WebSocket(wsUri);
+		websocket.onopen = function(evt) {
+			$("#output").append("Connesso<br>");
+			websocket.send("<br>" + document.getElementById('testo').value);
+		};
+		websocket.onclose = function(evt) {
+			$("#output").append("Disconnesso<br>"); 
+		};
+		websocket.onmessage = function(evt) {
+			$("#output").append('<div style="color: blue;">Risposta: ' + evt.data+'</div>');
+			websocket.close(); 
+		};
+		websocket.onerror = function(evt) {
+			$("#output").append('<div style="color: red;">ERROR:</div> ' + evt.data);
+		};
+	});	
 });
 </script>
-    <meta http-equiv="refresh" content="30">
+
+<script type="text/javascript" src="jquery.js"></script>
+<script language="javascript" type="text/javascript">
+
+  
+
+</script>
+
 </head>
 <body>
 <div>
@@ -97,7 +122,10 @@ th, td { width: 25%; }
 
 </div>
 </table>
-<br>
+<p></p>
+<input id="testo" type="text" name="testo" />
+<input id="salva" type="button" value="salva" onclick="salva()" />
+
 <INPUT TYPE="button" style="display: block;
 margin: 0 auto;
 border-radius: 50px 50px 50px 50px; 
