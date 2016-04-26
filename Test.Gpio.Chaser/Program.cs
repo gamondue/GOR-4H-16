@@ -12,8 +12,8 @@ namespace Test.Gpio.Chaser
     {
         static void Main(string[] args)
         {
-            const ConnectorPin led1Pin = ConnectorPin.P1Pin29;
-            const ConnectorPin buttonPin = ConnectorPin.P1Pin40;
+            const ConnectorPin led1Pin = ConnectorPin.P1Pin25;
+            const ConnectorPin buttonPin = ConnectorPin.P1Pin20;
             
 
             
