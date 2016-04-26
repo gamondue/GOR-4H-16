@@ -76,6 +76,7 @@
     <Compile Include="Digital_Io.cs" />
     <Compile Include="Humidity_Temperature_Air_DHT22.cs" />
     <Compile Include="Measurement.cs" />
+    <Compile Include="Pressure_MPL3115A2.cs" />
     <Compile Include="Sensor.cs" />
     <Compile Include="Temperature_DS1822.cs" />
     <Compile Include="Humidity_Air_HIH4000.cs" />
