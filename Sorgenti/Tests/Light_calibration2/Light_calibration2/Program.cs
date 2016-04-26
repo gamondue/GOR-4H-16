@@ -46,8 +46,9 @@ namespace Light_Calibration
                     file = new System.IO.StreamWriter(@"test.txt", true);
                     break;
                 case "p":
-                    file.WriteLine(riga + "\t" + "Campionatura:" + "\t" + args[1]);
-                    file.WriteLine(m.Value);
+                    Console.WriteLine(m.Value);
+                    file.WriteLine("Lettura:"+ "\t" + riga + "\t" + "Campionatura:" + "\t" + args[1]);
+                  
                     break;
                 case "t":
                     Console.WriteLine("coming soon!!!!");
