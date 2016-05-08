@@ -12,11 +12,14 @@ namespace Test.Gpio.DigitalInput
     {
         static void Main(string[] args)
         {
-            ConnectorPin connPin1 = ConnectorPin.P1Pin37;
-            ProcessorPin procPin1 = connPin1.ToProcessor();
 
-            ConnectorPin connPin2 = ConnectorPin.P1Pin38;
+            ConnectorPin connPin1 = ConnectorPin.P1Pin18;
+            ProcessorPin procPin1 = connPin1.ToProcessor();
+            int count1 = 0;
+
+            ConnectorPin connPin2 = ConnectorPin.P1Pin40;
             ProcessorPin procPin2 = connPin2.ToProcessor();
+            int count2 = 0;
 
             var driver = GpioConnectionSettings.DefaultDriver;
 
@@ -34,31 +37,42 @@ namespace Test.Gpio.DigitalInput
                 driver.Allocate(procPin1, PinDirection.Input);
                 driver.Allocate(procPin2, PinDirection.Input);
 
-                bool isHigh, isHigh2;
-                //Esempio di lettura del valore ed attesa di un po' di tempo, prima di leggere di nuovo 
+                bool isHigh1, isHigh2;
+                bool pastStatus1 = driver.Read(procPin1);
+                bool pastStatus2 = driver.Read(procPin2);
+
+                //Esempio di lettura del valore e visualizzazione solo delle differenze
                 while (true)
                 {
                     DateTime now = DateTime.Now;
-                    isHigh = driver.Read(procPin1);
+                    isHigh1 = driver.Read(procPin1);
                     isHigh2 = driver.Read(procPin2);
-                    Console.WriteLine(now + "." + now.Millisecond.ToString("000") + ": Pin " + procPin1 + " " + (isHigh ? "HIGH" : "LOW"));
-                    Console.WriteLine("                         Pin " + procPin2 + " " + (isHigh2 ? "HIGH" : "LOW"));
-                    // attende un po' 
-                    Thread.Sleep(500);
+                    if (isHigh1 != pastStatus1 || isHigh2 != pastStatus2)
+                    {
+                        if (isHigh1 != pastStatus1)
+                            count1++;
+                        else
+                            count2++;
+                        Console.WriteLine(now + "." + now.Millisecond.ToString("000") + ": Pin " + procPin1 + " " + (isHigh1 ? "HIGH" : "LOW"));
+                        Console.WriteLine("                         Pin " + procPin2 + " " + (isHigh2 ? "HIGH" : "LOW"));
+                        Console.WriteLine("                         Count 1 " + count1 + " Count 2 " + count2);
+                    }
+                    pastStatus1 = isHigh1;
+                    pastStatus2 = isHigh2;
                 }
 
-                // Esempio di attesa fino a che non cambia qualcosa nel pin 
-                isHigh = driver.Read(procPin1);
-                while (true)
-                {
-                    DateTime now = DateTime.Now;
-                    Console.WriteLine(now + "." + now.Millisecond.ToString("000") + ": " + (isHigh ? "HIGH" : "LOW"));
-                    // esempio di codice che attende che il valore cambi, per poi 
-                    // attendere dopo la lettura fino a che non assume il livello negato (fino a che non cambia)
-                    driver.Wait(procPin1, !isHigh, TimeSpan.FromDays(7)); //TODO: infinite
-                    // cambio lo stato della booleana per aspettare la prossima transizione sul fronte basso
-                    isHigh = !isHigh;
-                }
+                //// Esempio di attesa fino a che non cambia qualcosa nel pin 
+                //isHigh = driver.Read(procPin1);
+                //while (true)
+                //{
+                //    DateTime now = DateTime.Now;
+                //    Console.WriteLine(now + "." + now.Millisecond.ToString("000") + ": " + (isHigh ? "HIGH" : "LOW"));
+                //    // esempio di codice che attende che il valore cambi, per poi 
+                //    // attendere dopo la lettura fino a che non assume il livello negato (fino a che non cambia)
+                //    driver.Wait(procPin1, !isHigh, TimeSpan.FromDays(7)); //TODO: infinite
+                //    // cambio lo stato della booleana per aspettare la prossima transizione sul fronte basso
+                //    isHigh = !isHigh;
+                //}
 
             }
             finally
