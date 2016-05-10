@@ -1,16 +1,16 @@
 {
   "data": [
     [
-      "prova",
+      "prova2",
       "Temperatura",
       "IdTermometro",
-      "34 C"
+      "38 C"
     ],
     [
       "prova",
       "Umidita' dell'aria(HIH4000)",
       "Canale ADC",
-      "22%"
+      "27%"
     ],
     [
       "prova",
@@ -28,7 +28,7 @@
       "prova",
       "Luminosita'",
       "Canale ADC",
-      "40 lux"
+      "437 lux"
     ]
   ]
 }
