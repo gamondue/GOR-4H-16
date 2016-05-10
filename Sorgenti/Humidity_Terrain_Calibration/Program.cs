@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 using System.IO;
 
 
-//Gozzi-Romanino 4°H
-namespace Light_Calibration
+//Giorgi-Ricci
+namespace Humidity_Terrain_Calibration
 {
     public class Program
     {
@@ -22,16 +22,16 @@ namespace Light_Calibration
             DateTime data = DateTime.Now;
 
             Measurement m = sensore.Measure()[0];
-           // string riga = (data + "\t" + "Letto: Lux" + "\t" + m.Value);
+            string riga = (data + "\t" + "Letto: Umidità" + "\t" + m.Value);
             System.IO.StreamWriter file = new System.IO.StreamWriter(@"test.txt", true);
 
-            using (StreamWriter sw = File.AppendText(@"Z:\GOR\Tests\Test_GOR\Humidity_Terrain_Calibration\bin\Debug\salvataggi.txt"))
+           // using (StreamWriter sw = File.AppendText(@""))
             {
-                string riga = sensore.Read().ToString() + "\t" + args[0];         // salva nel file di testo   , che sarà nel 
-                sw.WriteLine(riga);
+               // string pino = sensore.Read().ToString() + "\t" + args[0];         // salva nel file di testo   , che sarà nel 
+               // sw.WriteLine(riga);
             }
 
-           // Console.WriteLine(riga);
+            Console.WriteLine(riga);
             string temp;
             // do
             {
@@ -48,7 +48,7 @@ namespace Light_Calibration
             switch(a)
             {
                 case 1:
-                    Console.WriteLine("Letto: %" + m.Value + "\t" + "Campionatura: Lux" + "\t" + temp);
+                    Console.WriteLine("Letto: %" + m.Value + "\t" + "Campionatura: Umidità" + "\t" + temp);
                     break;
                 case 2:
                     Console.WriteLine("Letto: %" + "\t" + m.Value);

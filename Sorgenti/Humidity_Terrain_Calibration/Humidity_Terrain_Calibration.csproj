@@ -92,9 +92,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\GorAcquire\GorAcquire.csproj">
+      <Project>{ba0f43d2-8a57-41a4-94cb-018ea2fb5d9e}</Project>
+      <Name>GorAcquire</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\GorDevices\GorDevices.csproj">
       <Project>{f61369cf-5cca-4adf-8771-67f003485464}</Project>
       <Name>GorDevices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Test_librerie\Test.Gpio.Chaser\Test.Gpio.Chaser.csproj">
+      <Project>{5d9d1834-4c4b-4e03-b635-5f205205b6f8}</Project>
+      <Name>Test.Gpio.Chaser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Test_librerie\Test.Gpio.WatchPin\Test.Gpio.WatchPin.csproj">
+      <Project>{60b59a9c-69f6-4cea-8385-c8542ae2bb98}</Project>
+      <Name>Test.Gpio.WatchPin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Test_librerie\Test.Spi.MCP3208\Test.Spi.MCP3208.csproj">
+      <Project>{d4b87926-598e-4eab-ba75-cd9fb253d450}</Project>
+      <Name>Test.Spi.MCP3208</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
