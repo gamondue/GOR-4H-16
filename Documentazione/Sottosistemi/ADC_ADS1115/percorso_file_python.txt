@@ -1,0 +1,1 @@
+/Baruzzi_ADC/Adafruit_Python_ADS1x15-master/Adafruit_ADS1x15/prova_ADC.py
