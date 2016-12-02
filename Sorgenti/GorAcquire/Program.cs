@@ -11,7 +11,8 @@ namespace Gor.Acquisition.Daemon
     /// </summary>
     class Program
     {
-        private const int samplePeriod = 1;            // [minutes]
+        private const double samplePeriod = 1 / 12.0;            // [minutes]
+        //private const double samplePeriod = 1;            // [minutes]
         private const bool readConfigFromFile = true; 
 
         // ADC channel of sensors
@@ -34,6 +35,8 @@ namespace Gor.Acquisition.Daemon
         //const string idTermometro = "28-00042e0c65ff";
         //const string idTermometro = "28-00042c643aff"; 
         //const string idTermometro = "28-00042e0c59ff"; 
+
+        static DateTime nextSampleTime;
 
         static List<Sensor> Sensors;    // list of all sensors used by this program 
         static GorDbWriter dbWriter;    // dbms writing class
@@ -74,9 +77,12 @@ namespace Gor.Acquisition.Daemon
             try
             {
                 Initialize(Gor.Common.sensorsSimulation); // viene passata la modalità di simulazione
+
+                nextSampleTime = DateTime.Now.AddMinutes(samplePeriod);
+
                 while (!exitProgram())
                 {
-                    Acquire();
+                    Sample();
                     SaveLog();
                     Wait();
                 }
@@ -165,7 +171,7 @@ namespace Gor.Acquisition.Daemon
 
             return;
         }
-        private static void Acquire()
+        private static void Sample()
         {
             if (!readConfigFromFile)
             { // configurazione fissa
@@ -254,39 +260,48 @@ namespace Gor.Acquisition.Daemon
         /// Returns when next sample time is reached
         /// </summary>
         private static void Wait()
-        {  
-            // remade by Monti: 2015-03-05
-            // set next sample instant
-            DateTime now = DateTime.Now;
-            // time difference to go to the next sample time, NOT truncated
-            TimeSpan span = new TimeSpan(0, samplePeriod,0); // hh, mm, ss
-            // find out next "raw" time: variable next (not truncated to the next sharp minute)
-            DateTime next = now.Add(span); 
+        {
+            // remade by Monti: from 2015-03-05
+
+            nextSampleTime = nextSampleTime.AddMinutes(samplePeriod);
+
+            if ((int)samplePeriod ==  samplePeriod) { 
+                // if the sample period is an integer or more minutes, then we will freeze the program 
+                // until we are near to the straight minute (00 second).
+                // We will then wait in a active loop to get the straight second
+
+                // set next sample instant
+                DateTime now = DateTime.Now;
+                // time difference to go to the next sample time, NOT truncated
+                TimeSpan span = new TimeSpan(0, (int)samplePeriod,0); // hh, mm, ss
+                // find out next "raw" time: variable next (not truncated to the next sharp minute)
+                DateTime next = now.Add(span); 
             
-            // find the minute BEFORE next "raw" minute that is sharp: variable nextMinute
-            int nextMinute = (next.Minute / samplePeriod) * samplePeriod;
-            Common.logger.Debug("Wait: nextMinute: " + nextMinute.ToString());
+                // find the minute BEFORE next "raw" minute that is sharp: variable nextMinute
+                int nextMinute = (next.Minute / (int) samplePeriod) * (int)samplePeriod;
+                Common.logger.Debug("Wait: nextMinute: " + nextMinute.ToString());
             
-            // build next sample time
-            DateTime nextSampleTime = new DateTime(next.Year, next.Month, next.Day,
-                next.Hour, nextMinute, 0);
-            Common.logger.Prompt("Waiting for the next sample time: " + nextSampleTime.ToString("yyyy-MM-dd HH:mm:ss"));
+                // build next sample time
+                nextSampleTime = new DateTime(next.Year, next.Month, next.Day,
+                    next.Hour, nextMinute, 0);
+                Common.logger.Prompt("Waiting for the next sample time: " + nextSampleTime.ToString("yyyy-MM-dd HH:mm:ss"));
             
-            // passive sleep with some awakenings, until 15 seconds before NextSampleTime
-            DateTime littleEarlier = nextSampleTime.AddSeconds(-15);
-            while (DateTime.Now < littleEarlier)
-            {
-                Thread.Sleep(5000);
-                // when awake: check if I have to make a sample 
-                sampleIfRequested(); 
-                // when awake: check if I have to stop program
-                if (exitProgram())
-                    return; // if I have to stop, exit method; main program will stop
+                // passive sleep with some awakenings, until 15 seconds before NextSampleTime
+                DateTime littleEarlier = nextSampleTime.AddSeconds(-15);
+                while (DateTime.Now < littleEarlier)
+                {
+                    Thread.Sleep(5000);
+                    // when awake: check if I have to make a sample 
+                    sampleIfRequested(); 
+                    // when awake: check if I have to stop program
+                    if (exitProgram())
+                        return; // if I have to stop, exit method; main program will stop
+                }
             }
             // active sleep, to catch sharp sample time instant
             while (DateTime.Now < nextSampleTime) ;
 
-            return; 
+            return;
         }
 
         private static void fixedConfiguration(bool inSimulation)
@@ -413,7 +428,7 @@ namespace Gor.Acquisition.Daemon
             if (c == 49) // codice ASCII di 1 
             {
                 Common.logger.Prompt("Sample on request"); 
-                Acquire();
+                Sample();
                 saveSingleSample();
                 putZeroInControlFile(Common.AcquireCommandFile);
             }

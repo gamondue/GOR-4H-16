@@ -32,14 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Raspberry.IO">
-      <HintPath>..\..\dll\Raspberry.IO.dll</HintPath>
+      <HintPath>..\..\..\dll\Raspberry.IO.dll</HintPath>
     </Reference>
     <Reference Include="Raspberry.IO.Components">
-      <HintPath>..\..\dll\Raspberry.IO.Components.dll</HintPath>
+      <HintPath>..\..\..\dll\Raspberry.IO.Components.dll</HintPath>
     </Reference>
     <Reference Include="Raspberry.IO.GeneralPurpose">
-      <HintPath>..\..\dll\Raspberry.IO.GeneralPurpose.dll</HintPath>
+      <HintPath>..\..\..\dll\Raspberry.IO.GeneralPurpose.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,7 +52,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnitsNet">
-      <HintPath>..\..\dll\UnitsNet.dll</HintPath>
+      <HintPath>..\..\..\dll\UnitsNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
